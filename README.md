@@ -1,7 +1,7 @@
-APL-lib
-=======
+APL-library
+===========
 
-APL-lib is a collection of APL libraries that provide much of the
+APL-library is a collection of APL libraries that provide much of the
 functionality of other scripting languages.
 
 APL is a functional programming language originally proposed in the
