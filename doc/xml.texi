@@ -1,0 +1,69 @@
+@node xml
+@chapter xml workspace
+@cindex xml
+@cindex schema, xml
+
+This workspace provides functions to implement an xml schema and a
+cascading stylesheet to display that schema.
+
+@section Schema
+
+Each element in a document using this schema can be generated from a
+function of that name.
+
+Each element-function will use its left argument as the element's
+attributes and its right as the element's content. Attributes are
+stored in lexicons (see workspace lex).
+
+For example, assume an HTML5 schema has been implemented:
+
+@verbatim
+      attr←(lex∆init) lex∆assign 'class' 'right-justified'
+      tag←attr html∆p 'Now is the winter of our discontent'
+	   tag
+<p class="right-justified">Now is the winter of our discontent" </p>`
+@end verbatim
+
+The schema is implemented by calling xml∆MkTagFns or
+xml∆MkClosedTagFns:
+
+@section Creating functions to support a schema
+
+
+@deffn ∇ xml∆MkTagFns tag
+
+Creates a function for elements named tag
+@end deffn
+
+@deffn ∇ xml∆MkClosedTagFns tag
+
+Creates a function for a empty tag (<br\>).
+@end deffn
+
+We've put an example application in html_test.apl.  This
+workspaces first provides functions for a subset of HTML5 and then
+defines html∆fmt_table to take an array of rank two and return an HTML
+page.
+
+
+@section Cascading Stylesheets
+@cindex cascading style sheet
+@cindex css
+
+Browsers use cascading stylesheets display an xml documnet.  They
+consist of a lexicon (see workspace lex) of selectors and rules.  Each
+rule consists of a lexicon of properties and values.
+
+There are two functions for cascading stylesheets:
+
+@deffn ∇ lex ← xml∆parse text
+
+Function returns a nested lexcion from the text of a stylesheet.
+@end deffn
+
+@deffn ∇ text ← xml∆mkSheet lex
+
+Function returns the text of a stylesheet from a nested lexicon.
+@end deffn
+
+

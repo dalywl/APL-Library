@@ -1,0 +1,45 @@
+@node dom
+@chapter Document Object Model for APL
+@cindex dom --- Document Object Model for APL
+@cindex Document Object Model
+
+This workspace provides an incomplete implementation of w3.com's
+Document Object Model (DOM).  The DOM creates and manipulates a graph
+database from an xml file. The specification leans heavily on object
+oriented programing constructs.
+
+This implementation provides a functional programming model with a
+function naming scheme to identify the objects in the
+specification. So that functions in the dom∆node family are methods
+specified for the node object and dom∆document functions are methods
+specified for the document object. Creation methods require a left
+argument of the name of the document variable, an idea not fully
+implemented in this version.
+
+The graph database design departs from the DOM in
+that children of a node are stored in an apl vector and the node
+methods firstChild, lastChild and nextSibling have not yet been
+implemented.
+
+Traversal of the graph is best illustrated by the function
+dom∆node∆toxml. That function recursively traverses the graph
+returning the variable xml, viz.:
+
+@verbatim
+      xml←xml,∊dom∆node∆toxml ¨ dom∆node∆children node
+@end verbatim           
+
+To build a DOM use dom∆parse:
+
+@verbatim
+      )copy 5 FILE_IO
+      dv ← 'dv' dom∆parse FIO∆read_file 'ADom.xml'
+@end verbatim
+
+To look at a DOM graph use dom∆node∆toxml:
+
+@verbatim
+      ⍞←dom∆node∆toxml node
+@end verbatim
+
+

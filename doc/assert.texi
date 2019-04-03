@@ -1,0 +1,78 @@
+@node assert 
+@chapter Assert, Testing source Code
+@cindex assert, testing source code
+
+
+This library contains functions to perform unit testing.  There are
+five basic functions, assert∆toScreen, assert∆return,
+assert∆nil∆toScreen, assert∆nil∆return and assert∆err.  These functions will
+execute their right argument (the test) and compare its results to the
+left argument.
+
+There are two functions for the environment, assert∆setup and
+assert∆cleanup.
+
+
+@deffn ∇ assert∆setup commands
+
+Execute a list of commands to setup for testing
+
+@end deffn
+
+@deffn ∇ assert∆cleanUp commands
+
+Execute a list of commands to clean up after testing
+
+@end deffn
+
+@deffn ∇ result assert∆toScreen test
+
+Prints a message to the screen indicating whether the test succeeded
+or failed.
+
+@end deffn
+
+@deffn ∇ b←result assert∆return test
+
+returns a Boolean value indicating whether the test succeeded or
+failed.
+
+@end deffn
+
+@deffn ∇ b ← eval_function assert∆nil∆toScreen  test
+
+Function to test a function without a return value. Such a function
+must have some side effects as it has no actual effect. One must write
+a function to test for the side effects and return True or False.
+Supply the name of that function as a character string.
+
+@end deffn
+
+@deffn ∇ b ← eval_function assert∆nil∆return test
+
+Like assert∆nil∆toScreen, returns true or false rather than cluttering
+up your screen.
+
+@end deffn
+
+@deffn ∇ assert∆message
+
+A simple (minded) function to display a message
+
+@end deffn
+
+@deffn ∇ error assert∆error test
+
+A Function to test that an error has occurred. Right now this is empty
+function. When I get a bright idea on how to do it I will.
+
+@end deffn
+
+@deffn ∇ b←result assert∆01 test
+
+A helper function to recursively evaluate nested test
+results. Navigates through the complexity of nested array to define
+what equals actually means.
+
+@end deffn
+

@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE resume SYSTEM "/home/dalyw/xml/resume-1_5_1/dtd/resume.dtd">
+<resume>
+  <header>
+    <name>
+      <firstname>Bill</firstname>
+      <surname>Daly</surname>
+    </name>
+    <address>
+      <street>299 Dilworth La.</street>
+      <city>Langhorne</city>
+      <state>Pa</state><zip>19047</zip>
+    </address>
+    <contact>
+      <phone>215-499-3457</phone>
+      <email>dalyw@dalywebandedit.com</email>
+    </contact>
+  </header>
+  <academics>
+    <degrees>
+      <degree>
+	<level>BBA Cum laude</level>
+
+	<institution>
+	  The Wharton School of the University of Pennsylvania
+	</institution>
+      </degree>
+      <degree>
+	<level>Certified Public Accountant</level>
+
+      </degree>
+    </degrees>
+  </academics>
+  <history>
+    <job>
+      <jobtitle>President</jobtitle>
+      <employer>
+	DWE-Accounting
+      </employer>
+      <period>
+	<from>
+	  <date>
+	    <month>10</month>
+	    <year>2013</year>
+	  </date>
+	</from>
+	<to>
+	  <present/>
+	</to>
+      </period>
+      <description>
+	<para>
+	  Founded this organization to provide part-time CFO services.
+	</para>
+	<para>
+	   Assist clients to prepare for their audits.
+	</para>
+	<para>
+	   Assist client to prepare their annual budgets and to
+	  review their financial results.
+	</para>
+      </description>
+      <achievements>
+	<achievement>
+	  Prepared three years of quarterly financial statements for a
+	  client seeking to reactive its SEC registration by filing a
+	  Form 10.
+	</achievement>
+	<achievement>
+	  Designed and implemented system to produce monthly
+	  rent rolls.  Property manager was using a service bureau for
+	  its accounting department.  Reporting was plain vanilla
+	  with no industry specific abilities. Office manager now
+	  produces this critical report at a considerable saving of
+	  both time and money.
+	</achievement>
+	<achievement>
+	  Revamped monthly reporting to better suit needs of Board of
+	  Directors. Company was using a one page complex
+	  format with budgets, consolidated income and line of
+	  business income. Reduced complexity by summarizing revenue
+	  and expenses and showing critical operating results for each
+	  line of business.
+	</achievement>
+	<achievement>
+	  Ported company accounts to Quickbooks on line,
+	  simplified billing and improved receivable and
+	  payable reporting.
+	</achievement>
+      </achievements>
+    </job>
+
+    <job>
+      <jobtitle>Director of Information Services and Comptroller</jobtitle>
+      <employer>Friends Rehabilitation Program</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>10</month>
+	    <year>2005</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <month>10</month>
+	    <year>2013</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>
+	  Company constructs and operates low income housing.  New
+	  projects are funded through grants from Philadelphia, the
+	  Commonwealth of Pennsylvania and Housing and Urban
+	  Development and from sale of low-income tax credits. Rents
+	  are typically subsidized with operating grants.
+	</para>
+      </description>
+      <achievements>
+	<achievement>
+	  Selected and installed Yardi accounting system.  Drafted
+	  a requirement's analysis for the company's accounting
+	  system.  Interviewed and selected vendors. Directed the
+	  installation and training.
+	</achievement>
+	<achievement targets="cpa">
+	  Setup grant ledger.  Company receives operating grants from
+	  Philadelphia, the Commonwealth of Pennsylvania and HUD.  Many
+	  require monthly and annual accounting on dates different
+	  from the company's fiscal year.  Implemented detail grant
+	  ledger by grant.
+	</achievement>
+	<achievement targets="cpa">
+	  Brought FRP into compliance with HUD tenant qualification
+	  rules.  Many of FRP's tenants granted assistance.  HUD's
+	  rules for compliance are exacting and FRP was cited for
+	  failures to comply. HUD accordingly withheld grant revenue
+	  pending proof of compliance.
+	</achievement>
+	<achievement targets="it">
+	  Selected virtual hosting service to replace in
+	  house servers.  The Company had an aging
+	  computer infrastructure.  Identified the need to replace the
+	  whole system.  Championed web-based services.  Wrote the
+	  Requirement's analysis.  Interviewed and selected the
+	  winning Vendor.
+	</achievement>
+	
+      </achievements>
+    </job>
+    <job>
+      <jobtitle>Vice President and Treasurer</jobtitle>
+      <employer>Daly Web and Edit, Inc.</employer>
+      <period>
+	<from>
+	  <date>
+	    <year>1986</year>
+	  </date>
+	</from>
+	<to>
+	  <present/>
+	</to>
+      </period>
+      <description>
+	<para>Family-owned business provides IT and publishing
+	  services. Provide support services for the publishing arm.</para>
+	<para>
+	  Built and maintained web sites driven by SQL databases.
+	  Worked with SQL Server, Oracle, Postgres, and Mysql.
+	</para>
+	<para>
+	  Consulted on converting hand-posted accounting systems to
+	  computer systems.  Installed and configured computer
+	  systems. Served as clients' systems administrator.
+	</para>
+      </description>
+      <achievements>
+	<achievement targets="it">
+	  Wrote and published Timothy, a file documentation and
+	  management program. 
+	  <url>http://dilworth.DalyWebAndEdit.com/timothy/manager.py</url>  
+	</achievement>
+	<achievement>
+	  Prepared an HIPAA compliance and security  guide for Friends Services
+	  for the Aging, a retirement community trade group.   Guide
+	  provides queries to assist IT managers to recognizing
+	  threats, and compare their policies with best practices.
+	</achievement>
+      </achievements>
+    </job>
+    <job>
+      <jobtitle>Comptroller</jobtitle>
+      <employer>GP Technologies</employer>
+      <period>
+	<from>
+	  <date>
+	    <year>1981</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <year>1986</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>Comptroller for this typewriter part
+	manufacturer.
+	</para>
+      </description>
+      <achievements>
+	<achievement>Designed and implemented standard cost system.</achievement>
+	<achievement>Migrated accounting system from a service bureau
+	to in--house computer system.  Directed modifications of an
+	off the shelf package to meet company's requirements.</achievement>
+      </achievements>
+    </job>
+    <job>
+      <jobtitle>Auditor</jobtitle>
+      <employer>KPMG Peat Marwick</employer>
+      <period>
+	<from>
+	  <date>
+	    <year>1976</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <year>1981</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>In-charge auditor for this Big Eight CPA firm</para>
+      </description>
+    </job>
+
+
+  </history>
+  <interests>
+    <interest>
+      <title>Alto recorder among other instruments, in the Newtown
+      Recorder Consort, a chamber music group</title>
+      <description>
+	<para>We perform Renaissance and baroque music for nursing
+	homes and local events.</para>
+      </description>
+    </interest>
+    <interest>
+      <title>Bucks Quarterly Meeting of Friends (Quakers)</title>
+      <description>
+	<para>Founded in the 1680s, Bucks Quarter consists of thirteen
+	local congregations in Bucks, Lehigh and Hunterdon counties.</para>
+	<para>
+	  Serve on board level committees.
+	</para>
+      </description>
+    </interest>
+  </interests>
+</resume>

@@ -1,0 +1,74 @@
+@node lpr
+@chapter lpr - print from APL
+
+Workspace to print directly from APL.
+
+@deffn ∇ err ← printer lpr txt
+
+Function to print plain text. On success lpr returns 0, otherwise an
+error code greater than 0.  See the man page for lpr.
+
+Printer is a lexicon of various printing parameters.  See lpr∆USLetter
+and lpr∆a4 below.
+@end deffn
+
+@deffn ∇ printAttr←lpr∆USLetter printer
+
+Function to assemble a printer lexicon for US Letter paper (8.5 inch
+by 11 inch).  Right argument printer is the name (as CUPS understands
+it) of your target printer.
+
+See your system administrator for this name.
+
+If you are the system adiministrator and are in the dark try `man
+cups`.
+@end deffn
+
+@deffn ∇ printAttr ← lpr∆a4 printer
+
+Function to Assemble a printer lexicon for A4 paper. Try `1 lpr∆din
+'A4' for this size of A4 paper. Talk to your system administrator for
+the printer name.
+@end deffn
+
+Margins for these printer lexicons were selected to yeild printouts that
+I liked. If you don't, roll your own. A printer lexicon is made up of
+the following items:
+
+@itemize
+@item printer
+The name of the printer to use.
+
+@item pageWidth
+
+@item pageLength
+
+@item topMargin
+Measured in lines of text
+
+@item bottomMargin
+
+@item leftMargin
+Measured in characters
+
+@item rightMargin
+
+@end itemize
+
+We are printing fixed width text after all.  For something fancier:
+
+@deffn ∇ err← printer lpr∆html html
+
+Function to render and then print html.  While one must supply a
+printer lexicon, the only item that is used here is the name of the
+printer.
+
+Function returns 0 on success and something greater on failure. See
+the man page for lpr.
+
+This function relies on html2ps written by Jan Kärrman; Dept. of
+Information Technology; Uppsala University; Sweden and is Free and
+Open Source Software. It is a package generally available from Ubuntu
+and Debian.
+@end deffn 
+

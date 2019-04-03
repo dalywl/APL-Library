@@ -1,0 +1,19 @@
+cl∆setup_db
+cl∆open_db
+cl∆close_db
+cl∆open
+cl∆close
+cl∆keys
+cl∆values
+cl∆init
+cl∆assign - add
+cl∆assgin - replace
+cl∆assign - fill holes, first component
+cl∆assign - fill holes, last component
+cl∆assign - fill holes, middle component
+cl∆assign - fill holes, multiple canidates
+cl∆drop
+cl∆lookup
+cl∆haskey
+cl∆is
+cl∆erase

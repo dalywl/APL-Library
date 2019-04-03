@@ -1,0 +1,105 @@
+\input texinfo
+@settitle APL-Library Version 0-1-3
+
+@setfilename apl-library.info
+@copying
+This manual documents the APL-Library, a collection of useful
+functions for the APL programmer.
+
+Copyrigtht @copyright{} 2018-2019 Bill Daly
+
+@quotation
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+    
+@end quotation
+@end copying
+
+@titlepage
+@title APL Library
+@author Bill Daly
+
+@page
+@vskip 1pt plus 1filll
+@insertcopying
+
+Published by Daly Web and Edit, Inc.
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top APL Library
+
+A collection of usefull functions for the APL programmer.
+@end ifnottex
+
+@menu
+*  assert::   Workspace to test source code
+*  cfg_file:: Workspace to read a Windows' configuration file
+*  date::     Workspace to store dates by number of days
+*  dom::      A partial implementation of w3.com's Document Object Model
+*  finance::  Present value functions
+*  fmt::      Partial implementation of STSC's ⎕fmt
+*  html::     Workspace to create html pages
+*  import::   Functions to read delimited files
+*  lex::      Workspace for storing lexicons of name--value pairs
+*  lex1::     Workspace for storing name--value pairs in a hash
+*  cl::       Workspace for storing name--value pairs in a component file
+*  lpr::      Functions for printing
+*  stat::     Workspace of statistical functions
+*  utl::      Workspace of general utility functions
+*  wp::       Workspace to print workpapers
+*  xml::      Workspace to create xml applications
+*  license::
+*  Index::
+
+@end menu
+
+@include assert.texi
+@page
+@include cfg_file.texi
+@page
+@include date.texi
+@page
+@include dom.texi
+@page
+@include finance.texi
+@page
+@include fmt.texi
+@page
+@include html.texi
+@page
+@include import.texi
+@page
+@include lex.texi
+@page
+@include lex1.texi
+@page
+@include cl.texi
+@page
+@include lpr.texi
+@page
+@include stat.texi
+@page
+@include utl.texi
+@page
+@include wp.texi
+@page
+@include xml.texi
+@page
+@node license
+@chapter The GNU Free Documentation License.
+@include /home/dalyw/GPL/fdl-1.3.texi 
+
+@node Index
+@unnumbered Index
+
+@printindex cp
+
+@bye

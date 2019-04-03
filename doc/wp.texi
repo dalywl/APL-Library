@@ -1,0 +1,152 @@
+@node wp
+@chapter wp Workspace
+@cindex wp
+@cindex workpapers
+@cindex print arrays
+
+A workspace to print arrays for an accountant. This workspace is very
+much a work-in-process and is included here as a test of many of the
+libraries published here and a test of their basic design.
+
+Accountants have specific requirements for their work papers. They
+must show the company about whom the work was prepared.  They must
+describe the work paper including the period as of which is was
+prepared (e.g., year ended 12/31/1957), the date of preparation, amd
+the author. Each of these data is stored with the underlying data as
+described below.
+
+Three functions to use this system are  wp∆init
+and wp∆assemble and wp∆txt∆assemble. More will follow
+
+@section Work Paper Lexicon
+
+A work paper is a lexicon of many elements:
+
+@table @option
+
+@item Data
+
+This is the actual array that will be printed.  Make the column
+headings line one of the array.
+
+@item Entity
+
+The name of the company, or other entity about which this work paper
+was prepared.
+
+@item Title
+
+A General description of the work period
+
+@item Period
+
+The time period of the data.  Balance sheets are the balance at the
+end of business on a day while income statements are for a period
+ended on a date.
+
+@item Id
+A short identifying string, like A1, B6.
+
+@item Author
+
+The maker of the work paper, generally an initial.
+
+@item Attributes
+
+An array the same size and shape and the data. Each cell is a lexicon
+which supplies the HTML attributes to guide one's browser on the
+display of the cell.
+
+A special attribute @code{format} may be used to convert the numbers to
+characters. wp∆assemble will execute @code {format ⍕ cell_value} in
+the assembly process rather than supplying the attribute to one's
+browser.
+
+See wp∆defaultcss below for a recipe for assembling this monster.
+
+@item Stylesheet
+
+A cascading style sheet.  Refer to the xml workspace documentation for
+how to assemble the style sheet.
+
+There is a default style sheet, wp∆defaultcss, which we recommend.  It
+provides several classes to display various parts of your
+work paper. See wp∆defaultcss below.
+
+@end table
+
+
+@section Functions in the workspace
+
+@deffn ∇ html ← wp∆assemble workpaper
+
+Returns an html page.
+
+@end deffn
+
+@deffn ∇ txt ← wp∆txt∆assemble wp
+
+Returns text. One may see the results of one's work with @code
+{⍞←wp∆txt∆assemble workpaper}
+@end deffn
+
+@deffn ∇ wp ← wp∆init 'Id'
+
+Create a work paper. You will be prompted for each item in the
+work paper lexicon.  The program uses the top-quit-done paradigm:
+
+@table @option 
+@item top
+Go to the first prompt
+@item quit
+Leave the program and abandon your work.
+@item done
+Leave the program and return the completed work paper lexicon
+@item back
+Go back one prompt
+@end table
+
+@end deffn
+
+@section wp∆defaultcss and its' ilk
+
+wp∆defaultcss is a cascading style sheet as implemented in the xml
+workspace.  That is a lexicon of selectors. Each selector is itself a
+lexicon of css attributes that instruct the browser in how to display
+the select html elements. (Function xml∆mkSheet returns the text
+document that the browser works with.)
+
+wp∆defaultcss defines a series of classes that can be assigned to a
+cell in one's table, viz.
+
+@verbatim
+      Attr[cellrow;cellcol]←(lex∆init)lex∆assign 'class' 'number'
+@end verbatim
+
+The number class is right justified.  Control the appearance of the
+number with format, viz.
+
+@verbatim
+      Attr[cellrow;cellcol]←Attr[cellrow;cellcol] lex∆assign 'format' '(55,530)'
+@end verbatim
+
+wp∆defaultcss classes   :
+
+@table @option
+@item colhead
+Column headers.  For instance:
+@verbatim
+      Attr[1;]←⊂(lex∆init)lex∆assign 'class' 'colhead'
+@end verbatim
+
+@item number
+Right justified cells
+
+@item page-head
+Special font for the heading of the work paper. That is the entity,
+description and period.
+
+@item initial-block
+Special font for the author and date of the work paper
+
+@end table

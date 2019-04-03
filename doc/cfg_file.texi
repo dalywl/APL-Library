@@ -1,0 +1,22 @@
+@node cfg_file 
+@chapter cfg_file --- Windows style configuration files
+@cindex cfg_file --- Windows style configuration files
+
+cfg_file parses Windows style configuration files (ini files).  These
+are text files, usually with a suffix of ini, used by various programs
+to store configuration information.
+
+Ini files are broken down into sections of name--value pairs. This
+workspaces stores this information in a lexicon of lexicons (see
+workspaces lex, lex1 and cl).  That is each section is separate item
+in the first level lexicon and each name--value pair in the section is
+a separate item in the second level of the lexicon.
+
+@deffn ∇ lex ← cfg∆parse_file name
+
+Reads an ini file and return a two level lexicon.  An optional left
+argument supplies the character used to begin comment lines in the
+file.
+
+@end deffn
+

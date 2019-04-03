@@ -1,0 +1,82 @@
+@node date
+@chapter  Date, an implementation of Lillian dating
+@cindex date, an implementation of Lillian dating
+
+This workspace implements Lillian dating, that is storing dates as the
+number of days from 10/15/1582.  It was proposed by IBM in 1986, and named
+after Aloysius Lilius who devised the Gregorian Calendar.
+
+Lillian dating simplifies date arithmetic as any date is stored as a
+simple integer.
+
+This workspace contains the following functions:
+
+@deffn ∇ int ← date∆lillian Date
+
+Returns a Lillian date for a three element vector of year,month,day.
+@end deffn
+
+@deffn ∇ vector ← date∆unlillian Lillian_date
+
+Returns a vector of year,month,day from a Lilian date.
+@end deffn
+
+@deffn ∇ vector← locale date∆parse date_string
+
+Returns a vector of integers for year, month and day. If date∆parse is
+unable to parse the string it will return an error message.
+
+The locale is a lexicon of the following key-value pairs
+
+@itemize
+@item months 
+(The months spelled out and in order)
+@item MTH 
+(The months abbreviated and in order)
+@item weekdays 
+(The days of the week spelled out and in order)
+@item wkd 
+(The days of the week abbreviated and in order)
+@item days 
+(The days of the month)
+@item two-digit-cutoff 
+(The years less than this are in the last
+   century).
+@item leap-month 
+(An integer for the month which has the leap-day)
+@item month_pos 
+(The position of the month in the numeric dates eg.
+   4/5/2016)
+@item year_pos 
+(The position of the year in numeric dates)
+@item day_pos 
+(The position of the year in numeric dates)
+@item epoch 
+(1582 10 15 -- unless one wants something other than lillian
+   dates)
+@end itemize
+   
+@end deffn
+
+@defvar date∆US
+
+A locale lexicon for US usage
+@end defvar
+
+@defvar date∆cal
+
+An 2 12 shaped array where line one is the days of each month in a
+leap year and line two the days of each month in a normal year.
+@end defvar
+
+@defvar date∆dates
+
+A lexicon of two name-value pairs.  'Year 0' is 1200. That is the
+previous year divisible by 4 that is not a leap year. (The essence of
+the Gregorian calendar reform).
+
+'Pre lillian' is the number of days from 1199 12 31 to 1582 10 15.
+
+Its best not to ask why this is needed.
+@end defvar
+

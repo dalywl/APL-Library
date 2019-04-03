@@ -1,0 +1,219 @@
+Entity: Dow Jones Industrial Index                       Id: wp∆∆dow
+Title:  Sample Yields                                Author:     wld
+Period: 10/15/2016                                                  
+                                                                    
+Symbol               Name                Value      Income    Yield 
+MMM     3m Company                        4604.49     114.05   2.477
+AXP     American Express                  6356.00     128.00   2.014
+AAPL    Apple Computer                  113700.00     228.00   0.201
+BA      Boeing                           13483.00     436.00   3.234
+CAT     Caterpillar                       8896.00     308.00   3.462
+CVX     Chevron Corp Common              10232.00     574.00   4.259
+CSCO    Cisco Systems                     3157.00     104.00   3.294
+KO      Coca Cola                         4168.00     140.00   3.359
+DD      Dupont                            6786.00     152.00   2.240
+XOM     Exxon Mobile                      8725.00     300.00   3.438
+GE      General Electric                  2940.00      92.00   3.129
+GS      Goldman Sachs                    10718.00     260.00   2.426
+HD      Home Depot                       12687.00     276.00   2.175
+IBM     Intrernational Business Machin   15684.00     560.00   3.571
+INTC    Intel Crop.                       6101.30     176.80   2.898
+JNJ     Johnson and Johnson               6205.68     176.80   2.849
+JPM     JPMorgan Chase                    6773.00     192.00   2.835
+MCD     McDonald's                       11325.00     376.00   3.320
+MRK     Merck & Co Inc.                   6249.00     184.00   2.944
+MSFT    Microsoft                         5774.00     156.00   2.702
+NKE     Nike                              5220.00      64.00   1.226
+PFE     Pfizer                            3378.00     120.00   3.552
+PG      Procter & Gamble                  8883.00     268.00   3.017
+VZ      Verizon Communications            5233.00     226.00   4.319
+
+
+(ses-cell A1 "Entity:" "Entity:" nil nil)
+(ses-cell B1 "Dow Jones Industrial Index" "Dow Jones Industrial Index" nil nil)
+(ses-cell C1 nil nil nil nil)
+(ses-cell D1 "Id:" "Id:" nil nil)
+(ses-cell E1 "wp∆∆dow" "wp∆∆dow" nil nil)
+
+(ses-cell A2 "Title:" "Title:" nil nil)
+(ses-cell B2 "Sample Yields" "Sample Yields" nil nil)
+(ses-cell C2 nil nil nil nil)
+(ses-cell D2 "Author:" "Author:" nil nil)
+(ses-cell E2 "wld" "wld" nil nil)
+
+(ses-cell A3 "Period:" "Period:" nil nil)
+(ses-cell B3 "10/15/2016" "10/15/2016" nil nil)
+(ses-cell C3 nil nil nil nil)
+(ses-cell D3 nil nil nil nil)
+(ses-cell E3 nil nil nil nil)
+
+(ses-cell A4 nil nil nil nil)
+(ses-cell B4 nil nil nil nil)
+(ses-cell C4 nil nil nil nil)
+(ses-cell D4 nil nil nil nil)
+(ses-cell E4 nil nil nil nil)
+
+(ses-cell A5 "Symbol" "Symbol" ses-center nil)
+(ses-cell B5 "Name" "Name" ses-center nil)
+(ses-cell C5 "Value" "Value" ses-center nil)
+(ses-cell D5 "Income" "Income" ses-center nil)
+(ses-cell E5 "Yield" "Yield" ses-center nil)
+
+(ses-cell A6 "MMM" "MMM" nil nil)
+(ses-cell B6 "3m Company" "3m Company" nil nil)
+(ses-cell C6 4604.490000000001 4604.490000000001 nil nil)
+(ses-cell D6 114.05000000000001 114.05000000000001 nil nil)
+(ses-cell E6 2.476930126897876 2.476930126897876 nil nil)
+
+(ses-cell A7 "AXP" "AXP" nil nil)
+(ses-cell B7 "American Express" "American Express" nil nil)
+(ses-cell C7 6356 6356 nil nil)
+(ses-cell D7 128 128 nil nil)
+(ses-cell E7 2.0138451856513533 2.0138451856513533 nil nil)
+
+(ses-cell A8 "AAPL" "AAPL" nil nil)
+(ses-cell B8 "Apple Computer" "Apple Computer" nil nil)
+(ses-cell C8 113700 113700 nil nil)
+(ses-cell D8 227.99999999999997 227.99999999999997 nil nil)
+(ses-cell E8 0.20052770448548812 0.20052770448548812 nil nil)
+
+(ses-cell A9 "BA" "BA" nil nil)
+(ses-cell B9 "Boeing" "Boeing" nil nil)
+(ses-cell C9 13483 13483 nil nil)
+(ses-cell D9 436.0000000000002 436.0000000000002 nil nil)
+(ses-cell E9 3.2337016984350666 3.2337016984350666 nil nil)
+
+(ses-cell A10 "CAT" "CAT" nil nil)
+(ses-cell B10 "Caterpillar" "Caterpillar" nil nil)
+(ses-cell C10 8896 8896 nil nil)
+(ses-cell D10 308 308 nil nil)
+(ses-cell E10 3.462230215827338 3.462230215827338 nil nil)
+
+(ses-cell A11 "CVX" "CVX" nil nil)
+(ses-cell B11 "Chevron Corp Common" "Chevron Corp Common" nil nil)
+(ses-cell C11 10232 10232 nil nil)
+(ses-cell D11 574 574 nil nil)
+(ses-cell E11 4.258792105653657 4.258792105653657 nil nil)
+
+(ses-cell A12 "CSCO" "CSCO" nil nil)
+(ses-cell B12 "Cisco Systems" "Cisco Systems" nil nil)
+(ses-cell C12 3157 3157 nil nil)
+(ses-cell D12 104 104 nil nil)
+(ses-cell E12 3.2942667089008553 3.2942667089008553 nil nil)
+
+(ses-cell A13 "KO" "KO" nil nil)
+(ses-cell B13 "Coca Cola" "Coca Cola" nil nil)
+(ses-cell C13 4168 4168 nil nil)
+(ses-cell D13 140 140 nil nil)
+(ses-cell E13 3.358925143953935 3.358925143953935 nil nil)
+
+(ses-cell A14 "DD" "DD" nil nil)
+(ses-cell B14 "Dupont" "Dupont" nil nil)
+(ses-cell C14 6786 6786 nil nil)
+(ses-cell D14 152 152 nil nil)
+(ses-cell E14 2.2399056881815502 2.2399056881815502 nil nil)
+
+(ses-cell A15 "XOM" "XOM" nil nil)
+(ses-cell B15 "Exxon Mobile" "Exxon Mobile" nil nil)
+(ses-cell C15 8725 8725 nil nil)
+(ses-cell D15 300 300 nil nil)
+(ses-cell E15 3.4383954154727796 3.4383954154727796 nil nil)
+
+(ses-cell A16 "GE" "GE" nil nil)
+(ses-cell B16 "General Electric" "General Electric" nil nil)
+(ses-cell C16 2940 2940 nil nil)
+(ses-cell D16 92 92 nil nil)
+(ses-cell E16 3.1292517006802725 3.1292517006802725 nil nil)
+
+(ses-cell A17 "GS" "GS" nil nil)
+(ses-cell B17 "Goldman Sachs" "Goldman Sachs" nil nil)
+(ses-cell C17 10718 10718 nil nil)
+(ses-cell D17 260 260 nil nil)
+(ses-cell E17 2.425825713752566 2.425825713752566 nil nil)
+
+(ses-cell A18 "HD" "HD" nil nil)
+(ses-cell B18 "Home Depot" "Home Depot" nil nil)
+(ses-cell C18 12687 12687 nil nil)
+(ses-cell D18 276 276 nil nil)
+(ses-cell E18 2.175455190352329 2.175455190352329 nil nil)
+
+(ses-cell A19 "IBM" "IBM" nil nil)
+(ses-cell B19 "Intrernational Business Machines Corp" "Intrernational Business Machines Corp" nil nil)
+(ses-cell C19 15684 15684 nil nil)
+(ses-cell D19 560 560 nil nil)
+(ses-cell E19 3.570517725070135 3.570517725070135 nil nil)
+
+(ses-cell A20 "INTC" "INTC" nil nil)
+(ses-cell B20 "Intel Crop." "Intel Crop." nil nil)
+(ses-cell C20 6101.300000000004 6101.300000000004 nil nil)
+(ses-cell D20 176.80000000000004 176.80000000000004 nil nil)
+(ses-cell E20 2.897743103928671 2.897743103928671 nil nil)
+
+(ses-cell A21 "JNJ" "JNJ" nil nil)
+(ses-cell B21 "Johnson and Johnson" "Johnson and Johnson" nil nil)
+(ses-cell C21 6205.680000000007 6205.680000000007 nil nil)
+(ses-cell D21 176.80000000000004 176.80000000000004 nil nil)
+(ses-cell E21 2.849002849002849 2.849002849002849 nil nil)
+
+(ses-cell A22 "JPM" "JPM" nil nil)
+(ses-cell B22 "JPMorgan Chase" "JPMorgan Chase" nil nil)
+(ses-cell C22 6773 6773 nil nil)
+(ses-cell D22 192.00000000000003 192.00000000000003 nil nil)
+(ses-cell E22 2.8347851764358483 2.8347851764358483 nil nil)
+
+(ses-cell A23 "MCD" "MCD" nil nil)
+(ses-cell B23 "McDonald's" "McDonald's" nil nil)
+(ses-cell C23 11325 11325 nil nil)
+(ses-cell D23 376 376 nil nil)
+(ses-cell E23 3.3200883002207506 3.3200883002207506 nil nil)
+
+(ses-cell A24 "MRK" "MRK" nil nil)
+(ses-cell B24 "Merck & Co Inc." "Merck & Co Inc." nil nil)
+(ses-cell C24 6249 6249 nil nil)
+(ses-cell D24 184.00000000000003 184.00000000000003 nil nil)
+(ses-cell E24 2.9444711153784606 2.9444711153784606 nil nil)
+
+(ses-cell A25 "MSFT" "MSFT" nil nil)
+(ses-cell B25 "Microsoft" "Microsoft" nil nil)
+(ses-cell C25 5774 5774 nil nil)
+(ses-cell D25 156.00000000000006 156.00000000000006 nil nil)
+(ses-cell E25 2.7017665396605475 2.7017665396605475 nil nil)
+
+(ses-cell A26 "NKE" "NKE" nil nil)
+(ses-cell B26 "Nike" "Nike" nil nil)
+(ses-cell C26 5220 5220 nil nil)
+(ses-cell D26 64 64 nil nil)
+(ses-cell E26 1.2260536398467434 1.2260536398467434 nil nil)
+
+(ses-cell A27 "PFE" "PFE" nil nil)
+(ses-cell B27 "Pfizer" "Pfizer" nil nil)
+(ses-cell C27 3378 3378 nil nil)
+(ses-cell D27 120.00000000000001 120.00000000000001 nil nil)
+(ses-cell E27 3.5523978685612785 3.5523978685612785 nil nil)
+
+(ses-cell A28 "PG" "PG" nil nil)
+(ses-cell B28 "Procter & Gamble" "Procter & Gamble" nil nil)
+(ses-cell C28 8883 8883 nil nil)
+(ses-cell D28 268 268 nil nil)
+(ses-cell E28 3.016998761679613 3.016998761679613 nil nil)
+
+(ses-cell A29 "VZ" "VZ" nil nil)
+(ses-cell B29 "Verizon Communications" "Verizon Communications" nil nil)
+(ses-cell C29 5233 5233 nil nil)
+(ses-cell D29 226 226 nil nil)
+(ses-cell E29 4.318746416969234 4.318746416969234 nil nil)
+
+(ses-column-widths [7 30 10 10 7])
+(ses-column-printers [("%s") ("%s") "%10.2f" "%10.2f" "%7.3f"])
+(ses-default-printer "%.7g")
+(ses-header-row 0)
+
+( ;Global parameters (these are read first)
+ 2 ;SES file-format
+ 29 ;numrows
+ 5 ;numcols
+)
+
+;; Local Variables:
+;; mode: ses
+;; End:

@@ -1,0 +1,29 @@
+#+COMMENT: -*- org-tags-column: 67 eval: (setq org-agenda-files (buffer-file-name)) -*-
+#+TITLE:     Test work plan
+#+AUTHOR:    Bill Daly
+#+EMAIL:     dalyw@DalyWebAndEdit.com
+#+DATE:      2013-01-09 Wed
+#+DESCRIPTION:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+TODO:      WRITE TODO FAILED SUCCESS
+
+* Unit tests
+** WRITE cl_test
+** TODO date_test
+** TODO dom-test
+** TODO finance-test
+** TODO html_test
+** TODO lex1_test
+** TODO lex_test01
+** TODO seq_test
+** TODO stat_test
+** TODO tb_errors
+Workspace calls a number of tb functions where an error should be generated.
+** TODO xml_test
+* System test
+** TODO exampleSession (test tb and wp)
+This workspace strictly speaking is not a unit tests.  Rather a system
+test of the tb workspace.  It provides unit test of prompt and wp.
+

@@ -1,0 +1,61 @@
+   15.6   15.79       2
+   15.8   15.99       6
+     16   16.19      11
+   16.2   16.39      16
+   16.4   16.59      12
+   16.6   16.79       7
+   16.8   16.99       3
+     17   17.19       2
+   17.2   17.39       1
+
+
+(ses-cell A1 15.6 15.6 nil (A2))
+(ses-cell B1 15.79 15.79 nil (B2))
+(ses-cell C1 2 2 nil nil)
+
+(ses-cell A2 15.799999999999999 (+ A1 0.2) nil (A3))
+(ses-cell B2 15.989999999999998 (+ B1 0.2) nil (B3))
+(ses-cell C2 6 6 nil nil)
+
+(ses-cell A3 15.999999999999998 (+ A2 0.2) nil (A4))
+(ses-cell B3 16.189999999999998 (+ B2 0.2) nil (B4))
+(ses-cell C3 11 11 nil nil)
+
+(ses-cell A4 16.2 (+ A3 0.2) nil (A5))
+(ses-cell B4 16.389999999999997 (+ B3 0.2) nil (B5))
+(ses-cell C4 16 16 nil nil)
+
+(ses-cell A5 16.4 (+ A4 0.2) nil (A6))
+(ses-cell B5 16.589999999999996 (+ B4 0.2) nil (B6))
+(ses-cell C5 12 12 nil nil)
+
+(ses-cell A6 16.599999999999998 (+ A5 0.2) nil (A7))
+(ses-cell B6 16.789999999999996 (+ B5 0.2) nil (B7))
+(ses-cell C6 7 7 nil nil)
+
+(ses-cell A7 16.799999999999997 (+ A6 0.2) nil (A8))
+(ses-cell B7 16.989999999999995 (+ B6 0.2) nil (B8))
+(ses-cell C7 3 3 nil nil)
+
+(ses-cell A8 16.999999999999996 (+ A7 0.2) nil (A9))
+(ses-cell B8 17.189999999999994 (+ B7 0.2) nil (B9))
+(ses-cell C8 2 2 nil nil)
+
+(ses-cell A9 17.199999999999996 (+ A8 0.2) nil nil)
+(ses-cell B9 17.389999999999993 (+ B8 0.2) nil nil)
+(ses-cell C9 1 1 nil nil)
+
+(ses-column-widths [7 7 7])
+(ses-column-printers [nil nil nil])
+(ses-default-printer "%.7g")
+(ses-header-row 0)
+
+( ;Global parameters (these are read first)
+ 2 ;SES file-format
+ 9 ;numrows
+ 3 ;numcols
+)
+
+;; Local Variables:
+;; mode: ses
+;; End:

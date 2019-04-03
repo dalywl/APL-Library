@@ -1,0 +1,127 @@
+@node finance
+@chapter finance -- Cash flow and present value
+@cindex finance
+@cindex present value
+@cindex discounted cash flow
+
+
+The finance workspace provides functions useful in understanding the
+cash flow and cash requirments of an enterprise and for planning and
+managing that cash flow.
+
+@section Simple amounts
+
+These functions work on a single cash payment. Each function expects a
+right argument vector of amount, interest rate, and number of periods.
+
+@deffn ∇ future_amt ← fin∆compoundValue arg
+
+Calculate the future value of a single sum. All arguments are made in
+a single right-argument vector of cash invested, interest rate per
+period, and  number of periods.
+	
+Interest rates are generally quoted at an annual rate ignoring the
+effects of compounding. Therefore $100 invested at 12% per annum and
+compounded monthly would yeild $112.68 from entering 
+
+@verbatim
+      fin∆compoundValue 100, (.12÷12) 12
+112.68
+@end verbatim
+@end deffn
+
+@deffn ∇ amt ← fin∆presentValue arg
+
+Function calculates the present value of a single sum payable in n
+periods. The right argument is assembled as with fin∆compoundValue. This
+is the reverse of fin∆compound value:
+
+@verbatim
+      fin∆presentValue 112.68 .01 12
+100
+@end verbatim
+@end deffn
+
+@section Periodic payments
+
+These functions work on a flow of cash.  For instance a mortgage
+(called an anuity here) is usually a loan of a specific sum (negative
+cash flow) followed by monthly payments and a fixed amount (positve
+cash flow). For these function the following datum appear
+
+@defvar pay
+
+The periodic payment
+@end defvar
+
+@defvar i
+
+The interest per period
+@end defvar
+
+@defvar n
+
+The number of periods.
+@end defvar
+
+@deffn ∇ amt ← fin∆presentValueAnnuity vector of pay i n
+
+Function caluclates the present value of an annuity, that is the
+amount of a loan today in exchange for a payment in each of N periods.
+The right argument is a vector of the payment, interest rate, and
+number of periods, viz.:
+
+@verbatim
+      fin∆presentValueAnnuity 100 .01 360
+9721.83
+@end verbatim
+
+@end deffn
+
+@deffn ∇ amt ← fin∆compoundAnnuity vector of pay i n
+
+Function calculates the future value of an annuity. That is the amount in a
+savings account after n periods of depositing the same amount. 
+
+@verbatim
+      fin∆compoundAnnuity 100 .01 360
+352991.38
+@end verbatim
+@end deffn
+
+@deffn ∇ amt← i fin∆netPresentValue vector_of_cash_flow
+
+Function calculates the net present value of a series of cash receipts
+and disbursements. The left argument is the interest rate and the
+right a vector of cash flow items. Conventionally, the receipts are
+positive and disbursement negative.
+
+The theory is that a firm has a cost of capital, that is an average
+rate of both the liabilities and equity.  An investment is evaluated
+using that rate and the expected cash flow from the investment.  This
+calculation can be made directly from that data. Some like internal
+rate of return (see fin∆irr next) are more difficult. Ussually one
+must take the nth root of a number and therefore one has n possible
+solutions. The finance workspace uses a converging iteration to find
+one of those solutions.
+
+@verbatim
+      .1 fin∆netPresentValue ¯100000 10000 11000 12000 14000 15000, 10⍴18000
+13408.07
+@end verbatim
+
+@end deffn
+
+@deffn ∇ i ← guess fin∆irr vector
+
+Internal rate of return.  That is the interest rate implied by a
+vector of cash flows. This return is calculated iteratively using the
+result of the last rate of return for the current calculation. One
+must supply a guess to start the process.
+
+@verbatim
+      .1 fin∆irr ¯100000 10000 11000 12000 14000 15000, 10⍴18000
+0.1222471688
+@end verbatim
+
+@end deffn

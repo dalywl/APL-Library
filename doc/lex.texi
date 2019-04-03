@@ -1,0 +1,51 @@
+@node lex
+@chapter Lex, a name-value store
+@cindex lex
+@cindex name-value pairs
+
+
+Lex is an implementation of a name-value store for apl. Functions here
+allow one to create such a store, add name and retrieve a value for a
+name.
+
+Functions are:
+
+@deffn ∇ lex ← lex∆init
+
+Returns an empty store
+
+@end deffn
+
+@deffn ∇ lex ← lex lex∆assign name value
+
+Returns a new lexicon with the supplied name--value inserted into the
+supplied lexicon.
+
+@end deffn
+
+@deffn ∇ item ← lex lex∆lookup name
+
+Returns the value of the supplied name.
+
+@end deffn
+
+@deffn ∇ boolean ← lex∆is lex
+
+Predicate to return true if the supplied item is in fact a lexicon
+
+@end deffn
+
+@deffn ∇ array ← lex∆keys lex
+
+Returns the list of names in the supplied lexicon
+
+@end deffn
+
+@deffn ∇ array ← lex∆values lex
+
+Returns a list of values in the supplied lexicon
+
+@end deffn
+
+We use and-dot-equals to do a sequential search of the list of names.
+For other hashing algorithms try lex1.

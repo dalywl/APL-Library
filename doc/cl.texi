@@ -1,0 +1,75 @@
+@node cl
+@chapter cl Component files with character string indicies
+@cindex cl
+@cindex component file
+
+This workspace supports name--value pairs in a component file.  It
+uses the APLComponentFiles written by Blake McBride and distributed
+with GNU APL.
+
+The workspaces uses the same API as lex.apl.  That is the following
+functions:
+
+
+@deffn ∇ array ← cl∆keys lex
+
+Returns a list of component names.
+@end deffn
+
+@deffn ∇ file_handle ←  cl∆init
+
+Creates a component file ant returns a file handle.
+@end deffn
+
+@deffn ∇ lex ←  lex cl∆assign name-value
+
+Assigns a component to a name. Will append or overwrite
+as appropriate.
+@end deffn
+
+@deffn ∇ item ← lex cl∆lookup name
+
+Returns the component with the supplied name.
+@end deffn
+
+@deffn ∇ boolean ←  cl∆is lex
+
+Determines if the supplied file handle (an integer) is in
+fact a lexicon based component file.
+@end deffn
+
+@deffn ∇ array ←  cl∆values lex
+
+Returns all of the components of the file up to a
+maximum of cl∆∆max.
+@end deffn
+
+@deffn ∇ ('postgresql' or 'sqllite') cl∆open_db db_spec
+
+Opens a database.  This is a wrapper for CF_DBCONNECT. The left
+argument identifies the type of database while the right (db_spec)
+varies by that type.  Postgress wants a connection string of
+'host=hostname user=username password=password dbname=data_base_name'
+while sqlite wants a file name.
+
+@end deffn
+
+@deffn ∇ file_handle ← cl∆open filename
+
+Opens a component file and returns a file handle.  cl∆open_db must be
+called before cl∆open as the component files are stored in an SQL
+database.
+
+@end deffn
+
+@deffn ∇ cl∆close fileHandle
+
+Close a component file.
+@end deffn
+
+@deffn ∇ lex ← cl∆close_db
+
+Closes the connection to the database. Function is a wrapper for
+CF_DBDISCONNECT.
+
+@end deffn

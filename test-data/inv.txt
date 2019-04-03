@@ -1,0 +1,16 @@
+Ticker	Name	Per share	Dividend	Div Yield	Fortune 500	Drucker	State of Inc.	Business	Comment	Cash from Operations	Interest exp	Reinvestment	Debt repayment	Dividends	Stock repurchases	EPS Shares
+XOM	Exon Mobile	71.69	3.18	0.044357651	1	71.7	NJ	Oil and petrochemicals generally	!:blank	30066	1132	15402	0	13001	0	4140.388769
+T	AT&T Inc.	31.09	2	0.06432936636	6	63.8	DE	Telecommunications and entertainment	Describes itself as a buyer, seller and operator of oil and gas ventures.	39151	7203	20647	12339	12038	0	6164
+GM	General Motors	34.69	1.52	0.04381666186	7	74.2	DE	Cars, Trucks and financing	!:blank	17328	575	8453	33592	2233	0	1465
+F	Ford Motor	8.82	0.6	0.06802721088	8	68.4	DE	Cars, Trucks and financing	Incorporated 1919	18096	3248.3	7049	40770	2584	0	3980.104712
+CVX	Chevron Corp.	115.49	4.44	0.038444887	10	61.5	DE	Vertically integrated oil and gasa	Describes itself as a buyer, seller and operator of oil and gas ventures.	20515	902	13404	6310	8132	0	1883
+IBM	International Business Machines	119.34	6.14	0.05144963968	28	79.2	NY	Integrated technology and services 	Significant stregth is cash generation. It is used for reinvestment and dividends?  2017 Cash from opeations includes deductions for Pensions etc: 2017 (7,794), 2016 (2,668), and 2015(1,229).	16724	615	3229	6816	5506	4340	937.4
+PG	Procter and Gamble	92.45	2.81	0.030394808	33	79.3	OH	Branded consumer package goods	Founded by Procter and Gambel in 1837; incorporated 1905.  Didn't use solutions in the business description.	14867	506	3717	2783	7310	7004	2529.3
+UPS	United Parcel Service, Inc.	105.32	3.56	0.03380174706	35	73.7	DE	Package delivery and logistics	Incorporated 1942; Playing Monopoly with Health care companies.	1479	453	5227	3993	2771	1813	871
+PEP	PepsiCo	115.82	3.46	0.02987394232	36	77.4	NC	Branded food snack and beverages	Incorporated 1919 in Delaware, reincorporated 1986 in NC.	9994	1151	2969	4406	4472	2005	1425
+PFE	Pifzer Inc.	43.92	1.34	0.03051001821	47	70.5	DE	Discovery, development, licensing, manufacturing, marketing, distribution and sale of biopharmaceutical products	Incorporated 1942; Playing Monopoly with Health care companies.	16470	1270	1956	6154	7659	0	6058
+KO	Coca-Cola Co.	49.09	1.54	0.03137095131	67	69.8	DE	Beverages	Simple business description with few buzzwords.	6995	841	1675	28768	6320	3682	4272
+ABBV	AbbVie Inc.	86.96	3.59	0.04128334867	81	66.6	DE	"We design and make semiconductors that we sell to electronics designers and manufacturers all over the world"	Simple business description with few buzzwords.	9960	1004	0	25	4107	1410	1596
+WHR	Whirlpool Corp.	120.37	4.5	0.03738473041	107	62.1	DE	The number one major appliance manufacturer in the world	Buzzword bingo about buying and selling companies.	1264	162	684	564	312	750	73.3
+BMY	Bristol-Meyers Squibb Co.	53.08	1.6	0.03014318011	112	62.9	DE	"global, independent chemical company". Apparently a crude oil refiner that creates chemical inputs to customer manugacturing.	All SEC technical points covered	6412	196	1056	1124	2577	2469	1645
+CMI	Cummins Inc.	148.54	4.38	0.02948700687	115	62.5	IN	"global, independent chemical company". Apparently a crude oil refiner that creates chemical inputs to customer manugacturing.	Some buzzwords.  They don't mask what the company does. Current portion of LT Debt is 2	2277	81	506	60	730	451	166.6

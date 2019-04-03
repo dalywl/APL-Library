@@ -1,0 +1,24 @@
+@node import
+@chapter import
+@cindex import
+@cindex delimited files
+@cindex csv
+
+Import is an apl workspace to import arrays from text files.
+
+@deffn ∇ array ← import∆file name
+
+Import∆file reads a file from disk and returns an array of rank 2,
+that is, rows and columns. It will determine whether the file is tab
+or comma delimited and will determine which columns contain numeric
+data and covert those strings to numbers.
+@end deffn
+
+@deffn ∇ array ← import∆table import_array
+
+Import∆table examines the array returned by import∆file.  It will
+remove blank columns, heading rows at the begining of the file and
+footer rows at the end.  It will also replace blank cells in numeric
+columns with zeros.
+
+@end deffn

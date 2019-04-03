@@ -1,0 +1,26 @@
+@node html
+@chapter html
+@cindex html
+							
+This is a workspace to create html files. html is a text markup scheme
+used by the world wide web.  At its most basic level html is a
+collection of tags, that is a word enclosed in angle brackets, which
+instruct a web browser how to display the text.
+
+The html workspace is an implementation of the xml workspace. html
+creates a set of functions that return marked up text for inclusion in
+an html document. It creates a function for each html tag that takes
+as its optional, left argument a lexicon of attributes (see workspace
+lex)and as its right argument the text to be marked up.
+
+A Hello World html document might be coded like this:
+
+@verbatim
+      head←html∆head html∆title 'Hello World'
+      html∆html head  , html∆body html∆h1 'Hello World'
+ 
+<html><head><title>Hello World</title></head>
+<body><h1>Hello World</h1></body></html>
+@end verbatim
+
+

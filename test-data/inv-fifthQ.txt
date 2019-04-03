@@ -1,0 +1,28 @@
+Ticker	Name	Per share	Dividend	Yeild
+GE	General Electric	7.5	0.04	0.5333333333
+IBM	IBM	124.27	6.28	5.053512513
+INTL	FCStone	38.96	0	0
+EPD	Enterprise Products Partners	26.25	1.73	6.59047619
+TRV	Travelors	130.37	3.08	2.362506712
+PM	Phillip Morris	86.53	4.56	5.269848607
+ABBV	AbbieVie, Inc.	94.27	4.28	4.540150631
+KHC	Kraft Heinz	51.12	2.5	4.890453834
+PAGP	Plains GP Holdings	22.13	1.2	5.422503389
+SO	Southern	47.33	2.4	5.070779632
+IEP	Icann Enterprises	66.87	7	10.46807238
+MO	Altria Group	54.83	3.2	5.836221047
+CTL	Century Link	18.8	2.16	11.4893617
+XONA.F	Exon Mobile	69.3	2.9	4.184704185
+GM	General Motors	37.95	1.52	4.005270092
+CVX	Chevron	118.94	4.48	3.94
+VZ	Verizon	60.3	2.41	3.99668325
+VLO	Valero Energy Corp	79.7	3.2	4.015056462
+MET	Metlife	44.63	1.86	4.167600269
+PRU	Prudential Financial	93.76	3.6	3.839590444
+IP	International Paper	46.19	2	4.329941546
+DUK	Duke Energy	88.57	3.71	4.188777238
+QCOM	Qualcomm	58.26	2.48	4.256779952
+WDC	Western Digital	45.39	2	4.406256885
+GIS	General Mills	42.31	1.96	4.632474592
+WRK	WRKCo, Inc.(WestRock)	47.11	1.82	3.863298663
+NWL	Newell Brands	23.4	0.92	3.931623932

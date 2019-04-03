@@ -1,0 +1,314 @@
+@node fmt
+@chapter fmt, a partial implementation of STSC's ⎕FMT
+@cindex fmt
+@cindex ⎕fmt
+
+The fmt workspace provides a partial implementation of STSC's ⎕fmt
+system function. The function will format numeric data in various ways
+and provides an alternative to providing example formats to ⍕.
+
+fmt takes as its left argument a character string that describes,
+column by column, how to render the data in an array, or number by
+number in a vector. This argument, we're calling the format string, is
+made up of one or more phrases separated by commas. Each phrase has
+one character that controls basic formatting. 'F' for fixed point, 'I'
+for integers, 'E' for scientific notation (exponential) or 'A' for
+characters (alpha-numeric) are examples. There are more, however they
+are not yet implemented in this workspace.
+
+@menu
+
+* Phrase::      Structure of a phrase
+* F::           Fixed point formatting
+* I::           Integer formatting
+* E::           Scientific notation or exponential
+* A::           Descriptions
+* Delimiters::  Entering text arguments to modifiers
+@end menu
+
+@node Phrase
+@section Structure of a phrase
+
+Each phrase in the the format string is separated from other phrases
+by a comma. The phrase may contain a number for how many times the
+phase repeats; Modifiers with their arguments; the phrase type (E F I
+E A and some other letters); the width of the resulting column; and
+the number of decimal places or number of significant digits.  Each
+type expects different modifiers.
+
+For example, the phrase 3M/(/N/)/CF14.2 would be parsed as follows:
+
+@itemize
+@item 3 repetitions
+This phrase applies to the next three columns of data.
+
+@item M/(/ Negative left decorator
+A left parentheses will preceed each number.
+
+@item  N/)/ Negative right decorator
+A right parentheses will follow a negative number.
+
+@item C Commas
+Insert comma separators between the 100s and 1,000s column; 100,000
+and 1,000,000 column etc.
+
+@item F Fixed point
+Use fixed point formatting meaning, insert a decimal and following
+digits.
+
+@item 14 Width
+Make the width of the column 14 characters.  No other white space will
+appear so that two numbers 101,000 and 999,650 set for a width of 9
+and precision of 2 will run together.
+
+@item 2 Decimal places
+Each number will be displayed with two digits to the right of the
+decimal. Integers will show '.00'
+@end itemize
+
+Note the delimiters around the text argument to the M and N
+modifiers. The valid text delimiters will be covered in @xref{Delimiters}.
+
+Possible modifiers vary by phrase type. See @xref{F}; @xref{I};
+@xref{E}; and @xref{A}.
+
+@node F
+@section Fixed point
+
+Fixed point formatting is used for numbers that may be made up of a
+whole number and a fractional number.  The fixed point (type F) phrase
+must contain both the width and precision, or number of decimal
+places.e.g.,
+
+@example
+F14.2
+@end example
+
+Calls for a column 14 characters wide and two places to the right of
+the decimal.
+
+Fixed point phrases may also contain modifiers and should look like
+this:
+
+@example
+rmFw.d
+@end example
+
+Where:
+@itemize
+@item r Repeat
+is the number of columns to which this phrase applies.
+
+@item m Modifiers
+Modifiers together with their arguments.  See below
+
+@item F Phrase type Fixed Point
+
+@item w Width
+
+@item d Precision
+@end itemize
+
+Valid modifiers for Fixed point phrases are:
+
+@deffn Modifier B Blank if zero
+@end deffn
+
+@deffn Modifier C Comma insertion
+@end deffn
+
+@deffn Modifier Ki Scale
+Multiply the number by 10 raised to the ith power.
+@end deffn
+
+@deffn Modifier L Left justify
+@end deffn
+
+@deffn Modifier M<text>
+Start each negative number with text. To differentiate positive and
+negative numbers one or more of M, N, P, or Q must be used.
+@end deffn
+
+@deffn Modifier N<text>
+End each negative number with text.
+@end deffn
+
+@deffn Modifier P<text>
+Start each positive number with text.
+@end deffn
+
+@deffn Modifier Q<text>
+End each positive number with text.
+@end deffn
+
+@deffn Modifier Z Zero fill
+The number will be padded both left and right with zeros.  If M, N, P
+or Q is used the amount of padding will be reduced to allow room for
+the decorators.
+@end deffn
+
+@node I
+@section Integers
+
+Integer formatting is used for whole numbers.  The decimal point will
+not be displayed.  The fields width is required. e.g.,
+
+@example
+I10
+@end example
+
+calls for a column ten characters wide.
+
+Integer phrases may also contain the repetition count, and modifiers and
+should look like this:
+
+@example
+rmIw
+@end example
+
+Where
+@itemize
+@item r
+is the number of repetition, that is columns, including the current to
+which the phrase applies.
+
+@item m
+Modifiers.  As with Fixed point several modifiers are available.  They
+are listed below
+
+@item I
+The integer phrase identifier.
+
+@item w
+Width
+@end itemize
+
+Valid Integer modifiers are:
+
+@deffn Modifier B Blank if zero
+@end deffn
+
+@deffn Modifier C Comma insertion
+@end deffn
+
+@deffn Modifier Ki Scale
+Multiply the number by 10 raised to the ith power.
+@end deffn
+
+@deffn Modifier L Left justify
+@end deffn
+
+@deffn Modifier M<text>
+Start each negative number with text. To differentiate positive and
+negative numbers one or more the this and the following three (N P and
+Q) must be used.
+@end deffn
+
+@deffn Modifier N<text>
+End each negative number with text.
+@end deffn
+
+@deffn Modifier P<text>
+Start each positive number with text.
+@end deffn
+
+@deffn Modifier Q<text>
+End each positive number with text.
+@end deffn
+
+@deffn Modifier Z Zero fill
+The number will be padded both left and right with zeros.  If M, N, P
+or Q is used the amount of padding will be reduced to allow room for
+the decorators.
+@end deffn
+
+@node E
+@section Exponential
+
+Exponential or scientific notation displays each number as a number
+between 0 and 10 and the exponent of 10 for the scale of the number
+1500 would be
+
+@example
+1.5E2
+@end example
+
+Both the width of the field and number of significant digits are
+required. A possible exponential phrase might be:
+
+@example
+E10.4
+@end example
+
+When this phrase is applied to 1500 the result (between the vertical
+bars) would be
+
+@example
+|   1.500E2|
+@end example
+
+
+@node A
+@section A, Formating descriptive (text) columns
+
+Text can be displayed with a type A phrase. How to do this depends on
+the data.  Simple arrays require a format field for each character in
+a line while nested arrays are displayed in one field.
+
+@subsection Simple arrays
+
+To display a simple character array use the repeat feature:
+
+@example
+      NAMES←4 6 ⍴ 'NUTS  SCREWSBOLTS NAILS '
+      COSTS← 0.05 0.03 0.20 0.01
+      QUANT← 150 200 4 1000
+(Reprinted from Gilman L, Rose AJ. APL: An Interactive Approach, ed. 2
+rev. Wiley, 1976, ch 21, p. 195)
+
+      '6A1,F10.2,I5,F10.2' fmt NAMES,COSTS,QUANT,[1.1]COSTS×QUANT
+ NUTS        0.05  150      7.50
+ SCREWS      0.03  200      6.00
+ BOLTS       0.20    4      0.80
+ NAILS       0.01 1000     10.00
+@end example
+
+
+
+Note that the number of times the type A field is repeated is equal to
+the width of the NAMES array.
+
+@subsection Nested arrays
+
+To display a nested character array, use the field width:
+
+@example
+      NAMES← 'NUTS' 'SCREWS' 'BOLTS' 'NAILS'
+      'A7,F10.2,I5,F10.2' fmt NAMES,COSTS,QUANT,[1.1]COSTS×QUANT
+ NUTS         0.05  150      7.50
+ SCREWS       0.03  200      6.00
+ BOLTS        0.20    4      0.80
+ NAILS        0.01 1000     10.00
+@end example
+
+@node Delimiters
+@section Delimiting text decoration
+
+Text that should appear within a numeric field is called a decorator.
+Such text should be bracketed by delimiters.  There are four sets
+
+@itemize @bullet
+@item
+⍞Decorator⍞
+@item
+⊂Decorato⊃
+@item
+<Decorator>
+@item
+/Decorator/
+@end itemize
+
+@example
+      '2M⊂(⊃N<)>CF14.2' fmt 13599 ¯13399
+    13,599.00    (13,399.00)
+@end example

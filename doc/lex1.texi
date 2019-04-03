@@ -1,0 +1,64 @@
+@node lex1
+@chapter Lex1, a hashed name-value store
+@cindex lex1
+@cindex hash tables
+
+Lex1 is an implementation of a name-value store for apl using a
+hash. Functions here allow one to create such a store, add name and
+retrieve a value for a name.
+
+Functions are
+
+@deffn ∇ lex ← lex1∆init
+
+Returns an empty store.
+@end deffn
+
+@deffn ∇ lex ← lex lex1∆assign name--value
+
+Returns a hash with the supplied name--value inserted into the supplied lexicon.
+
+@end deffn
+
+@deffn ∇ lex ← lex lex1∆lookup name
+
+Returns the value of the supplied name.
+
+@end deffn
+
+@deffn ∇ boolean ← lex1∆is lex
+
+Predicate to return true if the supplied item is in fact a
+  lexicon.
+
+@end deffn
+
+@deffn ∇ array ← lex1∆keys lex
+
+Returns the list of names in the supplied lexicon.
+
+@end deffn
+
+@deffn ∇ array ← lex1∆values lex
+
+Returns a list of values in the supplied lexicon.
+@end deffn
+
+@deffn ∇ int ← lex1∆hashPrime lex key
+
+Returns a bucket number mapped to the supplied key.
+@end deffn
+
+@deffn ∇ array ← lex1∆distribution lex
+
+Returns the number of items in each bucket.
+@end deffn
+
+We use @code{⎕io+prime|+/⎕ucs key} to compute the hash. It has
+two features:
+
+@itemize @bullet
+@item Its result is fixed and determinable for any key.
+@item It will yield an index into the hash.
+@end itemize
+
