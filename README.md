@@ -6,7 +6,8 @@ functionality of other scripting languages.
 
 APL is a functional programming language originally proposed in the
 1950s and implemented by IBM in the 1960s.  Several APL interpreters
-are available see http://www.sigapl.org/
+are available see http://www.sigapl.org/ These workspaces were
+developed in GNU APL (http://ftp.gnu.org/gnu/apl).
 
 APL uses a suite of operators and functions represented by special
 characters and many APL vendors use proprietary file formats.  Files
